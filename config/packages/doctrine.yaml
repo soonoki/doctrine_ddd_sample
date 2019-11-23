@@ -9,6 +9,9 @@ doctrine:
             collate: utf8mb4_unicode_ci
 
         url: '%env(resolve:DATABASE_URL)%'
+        types:
+            product_id: App\Types\ProductIdType
+            purchase_order_id: App\Types\PurchaseOrderIdType
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
